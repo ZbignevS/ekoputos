@@ -1,0 +1,64 @@
+.spinner{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    position: absolute;
+}
+.card{
+  max-width: 400px;
+  margin: 40px auto;
+  min-height: 400px;
+  text-align: center;
+}
+.fixer{
+  max-width: 400px;
+    margin: 40px auto;
+    min-height: 400px;
+    text-align: center;
+}
+.requests{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    right: -20px;
+    top: -20px;
+    border-radius: 10px;
+    line-height: 40px;
+    background: rgba(255,0,0,.6);
+    color: #fff;
+}
+.fails {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: -20px;
+    top: -20px;
+    border-radius: 10px;
+    line-height: 40px;
+    background: rgba(0,0,255,.6);
+    color: #fff;
+}
+h1{
+  display: block;
+  font-size: 2em;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+hr {
+  display: block;
+unicode-bidi: isolate;
+-webkit-margin-before: 0.5em;
+-webkit-margin-after: 0.5em;
+-webkit-margin-start: auto;
+-webkit-margin-end: auto;
+overflow: hidden;
+border-style: inset;
+border-width: 1px;
+}

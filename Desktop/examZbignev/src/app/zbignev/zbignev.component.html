@@ -1,0 +1,26 @@
+<mat-card class="card">
+  <h1>Meme generator</h1>
+  <div class="requests">
+    Įvykdytų užklausų: {{counter}}
+  </div>
+  <div class="fails">
+      Klaidų: {{ fails }}
+    </div>
+    <div class="fixer">
+      <mat-spinner class="spinner" *ngIf="!loaded"></mat-spinner>
+      <img  [hidden]="!loaded" (load)="isLoaded()" src="{{image}}">
+    </div>
+    <hr/>
+    <button *ngIf="counter != 3" (click)="previous()" color="primary" mat-button name="button" type="button">
+      <i class="material-icons">navigate_before</i>Previuos
+    </button>
+    <button disabled *ngIf="counter == 3" (click)="previous()" color="primary" mat-button name="button" type="button">
+      <i class="material-icons">navigate_before</i>Previuos
+    </button>
+    <button disabled *ngIf="counter == 3" (click)="next()" color="accent" mat-button name="button" type="button">
+    Next   <i class="material-icons">navigate_next</i>
+    </button>
+    <button *ngIf="counter < 3" (click)="next()" color="accent" mat-button name="button" type="button">
+    Next   <i class="material-icons">navigate_next</i>
+    </button>
+</mat-card>
