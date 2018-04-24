@@ -1,0 +1,129 @@
+
+
+#sienos {
+   background-image: url('../../assets/images/putos_icon_fat_full.png');
+    height: 90px;
+    width: 90px;
+}
+#stogas {
+// <<<<<<< HEAD
+//    background-image: url('../../assets/images/putos_icon_full.png');
+//    background-image: url('../../assets/images/putos_icon_open.png');
+// =======
+   background-image: url('../../assets/images/putos_icon_fat_open.png');
+
+    height: 90px;
+    width: 90px;
+}
+#grindys {
+   background-image: url('../../assets/images/grindys.png');
+    height: 90px;
+    width: 90px;
+}
+
+#icon-sienos:hover, #icon-sienos:active{
+  #sienos {
+    // background-image: url('../../assets/images/siena2.png');
+    background-image: url('../../assets/images/putos_icon_fat_full-w.png');
+  }
+}
+#icon-stogas:hover, #icon-stogas:active{
+  #stogas {
+    background-image: url('../../assets/images/putos_icon_full-w.png');
+    // background-image: url('../../assets/images/stogas2.png');
+    background-image: url('../../assets/images/putos_icon_fat_open-w.png');
+  }
+}
+#icon-grindys:hover, #icon-grindys:active{
+  #grindys {
+    background-image: url('../../assets/images/grindys2.png');
+  }
+}
+
+#empty, #viso, #viso-z{
+  border: 0px;
+  font-size: 20px;
+}
+#viso-z{
+  text-align: right;
+  font-size: 20px;
+}
+
+#empty{
+  text-align: center;
+  padding-bottom:5px;
+
+  .koef {
+    font-size:11px;
+    display:block;
+    margin: 2px auto -10px;
+  }
+}
+#empty-star{
+  text-align: left;
+  border: 0px;
+  font-size: 15px;
+  max-width: 90px;
+}
+.price{
+  text-align: left;
+}
+.form-in{
+  text-align: left;
+  color: #6ab43e;
+}
+.forma{
+  width: 68px;
+  border: 0px;
+  background-color: inherit;
+  color: #6ab43e;
+  // line-height: 20px;
+  // border: 2px solid #6ab43e;
+  // border-bottom: none;
+  // padding-top: 6px;
+  // padding-bottom: 6px;
+  //margin-bottom: -11px;
+}
+.forma::placeholder{
+  color: #6ab43e;
+}
+.table{
+  border: 0px !important;
+  background-color: inherit;
+}
+
+ tr, th{
+  border-color: #6ab43e !important;
+}
+.t-stogas{
+  height:15px;
+  width:auto;
+  //margin-right:20px;
+}
+.t-sienos{
+  height:21px;
+  width:auto;
+  //margin-right:20px;
+}
+.t-grindys{
+  height:8px;
+  width:auto;
+//  margin-right:20px;
+}
+
+
+@media only screen and (max-width: 420px){
+  .t-stogas{
+    display: none !important;
+  }
+  .t-sienos{
+    display: none !important;
+  }
+  .t-grindys{
+    display: none !important;
+  }
+  .row-text{
+    display: none !important;
+  }
+
+  }

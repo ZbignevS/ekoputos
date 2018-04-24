@@ -1,0 +1,23 @@
+<section id="straipsniai" class="bg-lighter">
+  <div *ngIf="about" class="container">
+    <div class="section-title text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="title text-uppercase"> {{ about["main_header1"] }} <span class="text-theme-colored"> {{ about["main_header2"] }}</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="section-content text-center">
+      <div class="row">
+        <div *ngFor="let post of blogData?.posts; let i = index" class="col-xs-12 col-sm-6 col-md-3 mb-sm-40 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div *ngIf="i<4">
+              <img class="img-fullwidth img-thumbnail mb-15" src="{{post?.descriptionImg}}" alt="">
+              <h3 class="mb-5">{{post?.title}}</h3>
+              <p>{{post?.content['1']['text'].slice(0,160)}}...</p>
+              <a routerLink="/straipsniai/irasas/{{i}}" class="btn btn-theme-colored">Daugiau</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

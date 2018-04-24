@@ -1,0 +1,13 @@
+.cta-text {
+  font-size: 29px;
+  font-weight: 700;
+}
+#sb{
+  max-width: 180px;
+}
+@media (max-width: 770px) {
+  #sb{
+    // display: none;
+    padding-top: 40px;
+  }
+}

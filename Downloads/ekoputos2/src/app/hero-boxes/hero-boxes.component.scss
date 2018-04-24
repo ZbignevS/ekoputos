@@ -1,0 +1,50 @@
+@mixin transition($property, $duration, $easing: linear) {
+	transition: $property $duration $easing;
+	-webkit-transition: $property $duration $easing;
+	-moz-transition: $property $duration $easing;
+}
+
+#img1
+{
+  height: 80px;
+  width: auto;
+  margin-top: 26px;
+  margin-bottom: 22px
+}
+#img2
+{
+  height: 76px;
+  width: auto;
+  margin-top: 26px;
+  margin-bottom: 22px;
+}
+#img3
+{
+  height: 76px;
+  width: auto;
+  margin-top: 26px;
+  margin-bottom: 22px;
+}
+#img4
+{
+  height: 126px;
+  width: auto;
+}
+
+textarea {
+  min-height: 45px;
+  height: 45px;
+  @include transition(all, .2s, ease-in-out);
+  &:focus {
+    min-height: 100px;
+  }
+}
+
+.btn-contact {
+  padding: 12px 22px;
+  margin-top: 3px;
+  background-color: #ffc62e;
+  text-transform: uppercase;
+  color: rgba(34,34,34,.75);
+  font-weight: 700;
+}

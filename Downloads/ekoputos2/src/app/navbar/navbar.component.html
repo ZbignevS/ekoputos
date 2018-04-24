@@ -1,0 +1,58 @@
+<header id="top" class="header">
+  <div class="header-top bg-theme-colored sm-text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="widget no-border m-0">
+            <ul class="list-inline sm-text-center mt-5">
+              <li>
+                <a href="tel:+37064624275" class="text-white"><b>{{ header?.phone_text }}</b></a>
+              </li>
+              <li>
+                <a href="tel:+37064624275" class="text-white"><b>{{ header?.phone_number }}</b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="widget no-border m-0">
+            <ul style="float:right;" class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-right flip sm-pull-none sm-text-center mt-sm-15">
+              <li class="sm-text-center mb-3"><b class="text-white follow-us">{{ header?.social_text }} </b></li>
+              <li *ngFor="let icons of header?.social_icons"><a target="_blank" href="{{ icons.link }}" class="navbar-li-height"><i class="{{ icons.icon }}"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="header-nav">
+  <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
+    <div class="container">
+      <nav id="menuzord-right" class="menuzord default">
+        <a class="menuzord-brand pull-left flip" style="margin-top:0.6em;" href="/">
+          <img src="../assets/images/logo.png" alt="">
+        </a>
+        <ul class="menuzord-menu">
+          <li><a href="{{ homeLink }}">Pradžia</a></li>
+          <li><a href="#apie">Apie mus</a></li>
+          <li><a href="#straipsniai">Straipsniai</a>
+            <ul class="dropdown">
+              <li>
+                <a href="#straipsniai">Naujausi straipsniai</a>
+              </li>
+               <li>
+                  <a routerLink="/straipsniai">Visi straipsniai</a>
+                </li>
+            </ul>
+          </li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="#duk">D.U.K.</a></li>
+          <li><a href="#darbai">Darbų eiga</a></li>
+          <li><a href="#skaiciuokle">Skaičiuoklė</a></li>
+          <li><a href="#kontaktai">Kontaktai</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

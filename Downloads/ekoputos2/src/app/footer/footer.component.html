@@ -1,0 +1,88 @@
+<footer id="footer" class="footer" data-bg-img="../assets/images/footer-bg2.png" data-bg-color="#25272e">
+    <div class="container pt-70 pb-10">
+      <div class="row">
+        <div class="col-sm-4 col-md-3">
+          <div class="widget dark">
+            <img class="mt-10 mb-20 footer-logo" alt="" src="../assets/images/logo-w.png">
+            <p class="mb-0">UAB „Ekoputos“<br />
+Gailiūnų 68-1, Gailiūnų km., Mickūnų sen., Vilniaus r.</p>
+            <ul class="list-inline mt-5">
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="tel:+37064624275">+370 646 24275</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="mailto:info@ekoputos.lt">info@ekoputos.lt</a> </li>
+            </ul>
+            <ul class="social-icons icon-dark icon-theme-colored icon-circled icon-sm mt-5">
+              <li><a href="mailto:info@ekoputos.lt"><i class="fa fa-envelope"></i></a></li>
+              <li><a href="https://www.facebook.com/ekoputos/"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Straipsniai</h5>
+            <div class="latest-posts">
+              <article class="post media-post clearfix pb-0 mb-10" *ngFor="let post of blogData?.posts; let i = index">
+                <div *ngIf="i<6">
+                  <a href="/straipsniai/irasas/{{i}}" class="post-thumb"><img alt="" src="{{post?.descriptionImg}}" style="max-width:80px;"></a>
+                  <div class="post-right">
+                    <h5 class="post-title mt-0 mb-5"><a href="/straipsniai/irasas/{{i}}">{{post?.title.slice(0,180)}}</a></h5>
+                    <p class="post-date mb-0 font-12">{{post?.date.month.slice(0,3)}} {{post?.date.day}}, {{post?.date.year}}</p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="widget dark" id="menuzord">
+            <h5 class="widget-title line-bottom">Nuorodos</h5>
+            <ul class="list angle-double-right list-border footer-nav">
+              <!-- <li><a href="{{homeLink}}">Pradžia</a></li> -->
+              <li><a href="#apie">Apie mus</a></li>
+              <!-- <li><a href="#straipsniai">Naujausi straipsniai</a></li> -->
+              <li><a routerLink="/straipsniai">Visi straipsniai</a></li>
+              <!-- <li><a href="#galerija">Galerija</a></li> -->
+              <li><a href="#duk">D.U.K.</a></li>
+              <li><a href="#darbai">Darbų eiga</a></li>
+              <li><a href="#skaiciuokle">Skaičiuoklė</a></li>
+              <li><a href="#kontaktai">Kontaktai</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom mb-10">Rekvizitai</h5>
+            <p class="mb-0">PVM mokėtojo kodas LT100006745313<br/>A.S. LT34 7300 0101 2624 3683
+              <br/>AB Swedbank b.k. 73000</p>
+              <p class="mt-10 mb-10">Darbo laikas:</p>
+            <div class="opening-hours">
+              <ul class="list-border">
+                <li class="clearfix"> <span> Darbo dienomis:</span>
+                  <div class="value pull-right">{{contactData?.working_hours.weekdays}}</div>
+                </li>
+                <li class="clearfix"> <span> Savaitgaliais: </span>
+                  <div class="value pull-right">{{contactData?.working_hours.weekends}}</div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container pt-15 pb-10">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <p class="font-11 text-black-777 m-0 sm-text-center">Sprendimas: *****</p> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>

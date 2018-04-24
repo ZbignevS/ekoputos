@@ -1,0 +1,52 @@
+.styled-icons.icon-sm a {
+  font-size: 16px !important;
+  margin-bottom: -8px !important;
+}
+
+.mb-3 {
+  margin-top: 4px !important;
+  margin-bottom: 3px !important;
+}
+
+.follow-us {
+  margin-right: 20px;
+}
+
+
+.menuzord-menu > li:hover > a {
+    background: #ffe191;
+    color: #7c5d09;
+}
+
+.menuzord .menuzord-menu ul.dropdown li:hover > a {
+    background: #ffe191;
+    color: #7c5d09;
+}
+
+@media (max-width: 991px) {
+  .mt-sm-15 {
+      margin-top: 5px !important;
+  }
+
+  .menuzord {
+    margin-bottom: 10px;
+
+    li > a {
+      padding: 8px 8px;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .menuzord {
+    // margin-bottom: 10px;
+
+    li > a {
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-top: 0px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.footer-logo {
+  max-width: 124px;
+}
+
+.menuzord-menu {
+  // background-color: red;
+  li {
+    float: none;
+    border-bottom: 1px dashed #404040;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+
+    margin: 5px 0;
+    font-weight: 500;
+    position: relative;
+  }
+}

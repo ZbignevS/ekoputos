@@ -1,0 +1,50 @@
+<div class="main-content">
+    <section class="inner-header divider parallax layer-overlay overlay-white-8" style="background-color:#ddd;">
+      <div class="container pt-10 pb-10">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="title">{{blogData?.title}}</h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container pt-30">
+        <div class="row multi-row-clearfix">
+          <div class="blog-posts">
+            <div class="col-md-6" *ngFor="let post of blogData?.posts; let i = index">
+              <article class="post clearfix mb-30 bg-lighter">
+                <div class="entry-header">
+                  <div class="post-thumb thumb">
+                    <img src="{{post?.descriptionImg}}" alt="" class="img-responsive img-fullwidth">
+                  </div>
+                </div>
+                <div class="entry-content border-1px p-20 pr-10">
+                  <div class="entry-meta media mt-0 no-bg no-border">
+                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
+                      <ul>
+                        <li class="font-16 text-white font-weight-600">{{post?.date['day'].slice(0,2)}}</li>
+                        <li class="font-12 text-white text-uppercase">{{post?.date['month'].slice(0,3)}}</li>
+                      </ul>
+                    </div>
+                    <div class="media-body pl-15">
+                      <div class="event-content pull-left flip">
+                        <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a routerLink="/straipsniai/irasas/{{i}}">{{post?.title}}</a></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-10">{{post?.content['1']['text'].slice(0,160)}}...</p>
+                  <a routerLink="/straipsniai/irasas/{{i}}" class="btn-read-more">Skaityti daugiau</a>
+                  <div class="clearfix"></div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

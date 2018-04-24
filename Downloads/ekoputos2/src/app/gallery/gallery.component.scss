@@ -1,0 +1,39 @@
+.section-content {
+  text-align: center;
+}
+
+button {
+  // position: relative;
+  text-align: center;
+  margin-top:10px;
+  z-index:99 !important;
+}
+
+.grid {
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    // margin: 3em 0;
+
+    .grid-item {
+      // margin: 1em;
+      margin: .1em;
+      // border-radius: .2em;
+      border-radius: 0;
+      overflow: hidden;
+      padding: 0;
+      // width: 200px;
+      min-width: 228px;
+      max-width: 24.5%;
+      height: 140px;
+      cursor: pointer;
+    }
+}
