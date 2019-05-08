@@ -1,0 +1,38 @@
+<!-- <div class="main" 
+[ngClass]="{'cloudy': weather === 'Clouds',
+            'sunny': weather === 'Clear',
+            'rainy': weather === 'Rain',
+            'snowy': weather === 'Snow'}">
+</div>
+<select [(ngModel)]="selectedCity" (ngModelChange)="showWeather($event)">
+  <option *ngFor="let city of cities">{{ city }}</option>
+</select> -->
+
+<select *ngIf="docTags" [(ngModel)]="selectedTopic" (ngModelChange)="showTopic($event)">
+  <option *ngFor="let cell of docTags?.doctags" [value]="cell.Id"> {{ cell.Title }} </option>
+</select>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Date</th>
+    <th>View Count</th>
+  </tr>
+  <tr *ngFor="let cell of topics?.res" (click)="showExamples(cell.Id)">
+    <th>{{ cell.Title }}</th>
+    <th>{{ toHumanDate(cell.CreationDate) }}</th>
+    <th>{{ cell.ViewCount }}</th>
+  </tr>
+</table>
+
+<hr>
+
+<div *ngIf="examples">
+  <div *ngFor="let example of examples.res">
+    <h1>{{ example.Title }}</h1>
+    <div [innerHTML]="example.BodyHtml"></div>
+  </div>
+</div>
+
+<!-- <p> {{ data?.message }} </p> -->
